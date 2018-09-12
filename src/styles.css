@@ -1,0 +1,140 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400');
+
+html, body {
+  /*font-family: 'PT Sans', sans-serif;*/
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+
+.btn-primary {
+  background: #FFAD00;
+  background-image: -webkit-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: -o-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: -moz-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-size: 200% 200%;
+  background-position: top right;
+  background-color: #FFAD00;
+  transition: all 0.15s ease;
+  color: #FFFFFF;
+}
+
+.btn-primary.animation-on-hover:hover {
+  background-position: bottom left;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.btn-primary.active:focus,
+.btn-primary.active:hover {
+  background-color: #E77B19 !important;
+  background-image: linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  background-image: -webkit-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  background-image: -o-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  background-image: -moz-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  color: #FFFFFF;
+  box-shadow: none;
+}
+
+.btn-primary:active {
+  box-shadow: none !important;
+  transform: translateY(1px) !important;
+  transition: all .15s ease;
+}
+
+.btn-primary:not([data-action]):hover {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+}
+
+.btn-primary.disabled,
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled.focus,
+.btn-primary.disabled:active,
+.btn-primary.disabled.active,
+.btn-primary:disabled,
+.btn-primary:disabled:hover,
+.btn-primary:disabled:focus,
+.btn-primary:disabled.focus,
+.btn-primary:disabled:active,
+.btn-primary:disabled.active,
+.btn-primary[disabled],
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled].focus,
+.btn-primary[disabled]:active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-primary:hover,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #FFAD00;
+  border-color: #FFAD00;
+}
+
+.btn-primary.btn-simple {
+  color: #FFAD00;
+  border-color: #FFAD00;
+  background: transparent;
+}
+
+.btn-primary.btn-simple:hover,
+.btn-primary.btn-simple:focus,
+.btn-primary.btn-simple:active,
+.btn-primary.btn-simple:not(:disabled):not(.disabled):active {
+  color: #FFAD00;
+  border-color: #FFAD00;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none;
+}
+
+.btn-primary.btn-simple.active {
+  border-color: #FFAD00 !important;
+}
+
+.btn-primary.btn-simple.active:hover,
+.btn-primary.btn-simple.active:focus,
+.btn-primary.btn-simple.active:active,
+.btn-primary.btn-simple.active:not(:disabled):not(.disabled):active {
+  color: #FFFFFF;
+  border-color: #FFAD00;
+  background-image: linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  background-image: -webkit-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  background-image: -o-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  background-image: -moz-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00) !important;
+  background-color: #E77B19 !important;
+  box-shadow: none;
+}
+
+.btn-primary.btn-link {
+  color: #FFAD00;
+}
+
+.btn-primary.btn-link:hover,
+.btn-primary.btn-link:focus,
+.btn-primary.btn-link:active {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  text-decoration: none;
+  box-shadow: none;
+}
+

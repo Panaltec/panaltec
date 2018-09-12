@@ -1,0 +1,48 @@
+
+.bg {
+    /*background: linear-gradient(#F0801A, #FAB600);*/
+    background: #F5F6FA;
+    border-top-color: #FAB600 !important;
+    border-top-width: 2px !important;
+    font-family: 'Poppins';
+    font-weight: 300;
+  }
+
+  .color-button {
+      /*color: white !important;*/
+      color: #1d253b !important;
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #E77B19;
+      border-width: 1px;
+      width: 45px;
+  }
+
+  .color-button:hover {
+  color: white !important;
+  }
+
+  .dropdown-toggle {
+    color: #1d253b !important;
+  }
+
+  .image {
+    /*filter: brightness(0) invert(1);*/
+  }
+
+  .ion-md-settings {
+    font-size: 20px;
+  }
+
+  .btn:hover {
+    background: #FFAD00;
+    background-image: -webkit-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+    background-image: -o-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+    background-image: -moz-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+    background-image: linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+    background-size: 200% 200%;
+    background-position: top right;
+    background-color: #FFAD00;
+    transition: all 0.15s ease;
+    color: #FFFFFF;
+  }

@@ -1,0 +1,154 @@
+.container-fluid {
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 25px; /* Set the fixed height of the footer here */
+  line-height: 25px; /* Vertically center the text there */
+  /*background: linear-gradient(#FAB600, #F0801A); 
+  background-color: #F5F6FA;
+  color: #1d253b;*/
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+.bg {
+  background-color: rgb(245, 246, 250);
+  height: auto;
+}
+
+.sizefont {
+  font-size: 13px;
+}
+
+.orange {
+  color: #FAB600 !important;
+}
+
+.bg-gradient {
+  background: linear-gradient(#FAB600, #F0801A); 
+}
+
+.text-gray {
+  color: #1d253b;
+}
+
+.shadow {
+ box-shadow: 0 1px 15px 0 rgba(123, 123, 123, 0.05) !important;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.text-title {
+  color: #9A9A9A !important;
+  font-weight: 300;
+}
+
+.text-title-1 {
+  color: #1d253b !important;
+  font-weight: 200;
+  font-size: 25px !important;
+}
+
+.text-title-2 {
+  color: #1d253b !important;
+  font-weight: 200;
+  font-size: 25px !important;
+  padding-top: -35px;
+  padding-left: 10px;
+  margin-top: -35px;
+}
+
+.h2 {
+  font-weight: 300;
+}
+
+.bg-footer {
+  background: #FFAD00;
+  background-image: -webkit-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: -o-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: -moz-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-size: 200% 200%;
+  background-position: top right;
+  background-color: #FFAD00;
+  transition: all 0.15s ease;
+  color: #FFFFFF;
+}
+
+.btn-outline-warning {
+  border-width: 2px;
+}
+
+.btn-outline-warning:hover {
+  color: white !important;
+}
+
+.btn-group:focus {
+  color: white !important;
+}
+
+.btn-group:active {
+  color: white !important;
+}
+
+.border-radius-left {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+
+.border-radius-right {
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+.border-radius {
+  border-radius: 14px !important;
+}
+
+.border-none {
+  border-radius: 0 !important;
+}
+
+.demo-chart {
+  height: 280px;
+}
+
+:host ::ng-deep .tabset1 {
+  color: #1d253b;
+  font-size: 12;
+  border-color: #E77B19 !important;
+  border-width: 2px !important;
+  border-radius: 25px;
+
+}
+
+:host ::ng-deep .tabset1 a.nav-link {
+  border-radius: 18px;
+  border-style: solid;
+  border-color: #E77B19;
+  border-width: 1px;
+  color: #1d253b;
+  font-size: 12;
+}
+
+:host ::ng-deep .tabset1 a.nav-link.active {
+  border-radius: 18px;
+  border: none;
+  background: #FFAD00;
+  background-image: -webkit-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: -o-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: -moz-linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-image: linear-gradient(to bottom left, #FFAD00, #E77B19, #FFAD00);
+  background-size: 200% 200%;
+  background-position: top right;
+  background-color: #FFAD00;
+  transition: all 0.15s ease;
+  color: #FFFFFF;
+  font-size: 12;
+}

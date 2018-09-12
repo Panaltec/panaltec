@@ -1,0 +1,176 @@
+<div class="container-fluid pt-4 bg">
+    <div class="card-deck pb-4">
+        <div class="card text-center border-0 shadow">
+            <div class="card-body p-2">
+                <small class="text-title">
+                    Temperatura Interna
+                </small>
+                <p class="h2 text-gray pt-3">
+                    <span class="icon ion-ios-thermometer pr-3 orange"></span>
+                    {{temp1 | number:'1.0-2'}}
+                    <small class="text-title h6">C°</small>
+
+                </p>
+                <p class="card-text">
+                    <small class="text-muted">min {{tempIntMin}}° | max {{tempIntMax}}°</small>
+                </p>
+            </div>
+        </div>
+        <div class="card text-center border-0 shadow">
+            <div class="card-body p-2">
+                <small class="text-title">
+                    Humedad Interna
+                </small>
+                <p class="h2 text-gray pt-3">
+                    <span class="icon ion-ios-water orange pr-3"></span>
+                    {{hum1 | number:'1.0-2'}}
+                    <small class="text-title h6"> %</small>
+
+                </p>
+                <p class="card-text">
+                    <small class="text-muted">min {{humIntMin}}° | max {{humIntMax}}°</small>
+                </p>
+            </div>
+        </div>
+        <div class="card text-center border-0 shadow">
+            <div class="card-body p-2">
+                <small class="text-title">
+                    Temperatura Externa
+                </small>
+                <p class="h2 text-gray pt-3">
+                    <span class="icon ion-ios-thermometer orange pr-3"></span> {{temp2 | number:'1.0-2'}}
+                    <small class="text-title h6"> C°</small>
+                </p>
+                <p class="card-text">
+                    <small class="text-muted">min {{tempExtMin}}° | max {{tempExtMax}}°</small>
+                </p>
+            </div>
+        </div>
+        <div class="card text-center border-0 shadow">
+            <div class="card-body p-2">
+                <small class="text-title">
+                    Humedad Externa
+                </small>
+                <p class="h2 text-gray pt-3">
+                    <span class="icon ion-ios-water orange pr-3"></span>
+                    {{hum2 | number:'1.0-2'}}
+                    <small class="text-title h6"> %</small>
+
+                </p>
+                <p class="card-text">
+                    <small class="text-muted">min {{humExtMin}}° | max {{humExtMax}}°</small>
+                </p>
+            </div>
+        </div>
+        <div class="card text-center border-0 shadow">
+            <div class="card-body p-2">
+                <small class="text-title">
+                    Peso
+                </small>
+                <p class="h2 text-gray pt-3">
+                    <span class="icon ion-ios-pulse orange pr-3"></span>
+                    {{weight | number:'1.0-2'}} <small class="text-title h6"> Kg</small>
+                </p>
+            </div>
+        </div>
+        <div class="card text-center border-0 shadow">
+            <div class="card-body p-2">
+                <small class="text-title">
+                    Actividad
+                </small>
+                <p class="h4 text-gray pt-4">
+                    <span class="icon ion-ios-swap orange pr-3"></span>
+                    {{cardCount | uppercase}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--<a routerLink="/blog">Clickeame</a>-->
+    <div class="card border-0 shadow">
+        <div class="card-body">
+
+            <ngb-tabset [justify]="currentJustify" class="tabset1">
+                <ngb-tab title="Temperatura y humedad">
+                    <ng-template ngbTabContent>
+                        <div class="text-title-2">Variables Ambientales</div>
+                        <div echarts [options]="chartOption" class="demo-chart"></div>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab title="Peso">
+                    <ng-template ngbTabContent >
+                            <div class="text-title-2">Peso</div>
+                            <div echarts [options]="chartOption1" class="demo-chart"></div>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab title="Actividad">
+                    <ng-template ngbTabContent >
+                            <div class="text-title-2">Actividad</div>
+                            <div echarts [options]="chartOption2" class="demo-chart"></div>
+                    </ng-template>
+                </ngb-tab>
+            </ngb-tabset>
+
+            <!--<div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="text-title-1">Gráfico de Datos</div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <ul class="nav nav-pills float-right" id="pills-tab" role="tablist">
+                        <li class="">
+                            <a (click)="graphTemp()" class="btn btn-sm btn-primary btn-simple border-radius-left active" id="pills-home-tab" data-toggle="pill"
+                                href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Temp
+                                y Hum</a>
+                        </li>
+                        <li class="">
+                            <a (click)="graphWeight()" class="btn btn-sm btn-primary btn-simple border-left-0 border-right-0 border-none" id="pills-profile-tab"
+                                data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Peso</a>
+                        </li>
+                        <li class="">
+                            <a (click)="graphActivity()" class="btn btn-sm btn-primary btn-simple border-radius-right" id="pills-contact-tab" data-toggle="pill"
+                                href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Actividad</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                        <label class="btn btn-sm btn-primary btn-simple border-radius-left" (click)="getDataGrapDay()">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked>24 h.
+                        </label>
+                        <label class="btn btn-sm btn-primary btn-simple active" (click)="getDataGrapWeek()">
+                            <input type="radio" name="options" id="option2" autocomplete="off">Semana
+                        </label>
+                        <label class="btn btn-sm btn-primary btn-simple" (click)="getDataGrapMonth()">
+                            <input type="radio" name="options" id="option3" autocomplete="off">Mes
+                        </label>
+                        <label class="btn btn-sm btn-primary btn-simple border-radius-right" (click)="getDataGrapYear()">
+                            <input type="radio" name="options" id="option4" autocomplete="off">Año
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row card border-0">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div echarts [options]="chartOption" class="demo-chart"></div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div echarts [options]="chartOption1" class="demo-chart"></div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div echarts [options]="chartOption2" class="demo-chart"></div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+
+</div>
+
+
+<footer class="footer fixed-bottom bg-footer">
+    <div class="container d-flex justify-content-end">
+        <span>Ultimo dato enviado: {{date}}</span>
+    </div>
+</footer>
