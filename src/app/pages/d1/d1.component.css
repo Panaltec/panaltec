@@ -59,9 +59,7 @@
   color: #1d253b !important;
   font-weight: 200;
   font-size: 25px !important;
-  padding-top: -35px;
-  padding-left: 10px;
-  margin-top: -35px;
+  padding-bottom: 1em;
 }
 
 .h2 {
@@ -151,4 +149,8 @@
   transition: all 0.15s ease;
   color: #FFFFFF;
   font-size: 12;
+}
+
+.ngb-tabset{
+  padding: 1em;
 }

@@ -131,10 +131,10 @@ export class D1Component implements OnInit {
           z['$key'] = elements.key;
           this.messajeList1.push(z as Message);
         });
-        const tempInterna = this.messajeList1.map(res => res.temp1);
-        const humInterna = this.messajeList1.map(res => res.hum1);
-        const tempExterna = this.messajeList1.map(res => res.temp2);
-        const humExterna = this.messajeList1.map(res => res.hum2);
+        const tempInterna = this.messajeList1.map(res => res.temp2);
+        const humInterna = this.messajeList1.map(res => res.hum2);
+        const tempExterna = this.messajeList1.map(res => res.temp1);
+        const humExterna = this.messajeList1.map(res => res.hum1);
 
         if (tempInterna.length === 0 && humInterna.length === 0 && tempExterna.length === 0 && humExterna.length === 0) {
 
@@ -171,10 +171,10 @@ export class D1Component implements OnInit {
           z['$key'] = elements.key;
           this.messajeList.push(z as Message);
         });
-        const tempInterna = this.messajeList.map(res => res.temp1);
-        const humInterna = this.messajeList.map(res => res.hum1);
-        const tempExterna = this.messajeList.map(res => res.temp2);
-        const humExterna = this.messajeList.map(res => res.hum2);
+        const tempInterna = this.messajeList.map(res => res.temp2);
+        const humInterna = this.messajeList.map(res => res.hum2);
+        const tempExterna = this.messajeList.map(res => res.temp1);
+        const humExterna = this.messajeList.map(res => res.hum1);
         const date = this.messajeList.map(res => res.ts);
         const dias = [];
 

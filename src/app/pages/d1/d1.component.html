@@ -7,8 +7,8 @@
                 </small>
                 <p class="h2 text-gray pt-3">
                     <span class="icon ion-ios-thermometer pr-3 orange"></span>
-                    {{temp1 | number:'1.0-2'}}
-                    <small class="text-title h6">C°</small>
+                    {{temp2 | number:'1.0-2'}}
+                    <small class="text-title h6">°C</small>
 
                 </p>
                 <p class="card-text">
@@ -23,7 +23,7 @@
                 </small>
                 <p class="h2 text-gray pt-3">
                     <span class="icon ion-ios-water orange pr-3"></span>
-                    {{hum1 | number:'1.0-2'}}
+                    {{hum2 | number:'1.0-2'}}
                     <small class="text-title h6"> %</small>
 
                 </p>
@@ -38,8 +38,8 @@
                     Temperatura Externa
                 </small>
                 <p class="h2 text-gray pt-3">
-                    <span class="icon ion-ios-thermometer orange pr-3"></span> {{temp2 | number:'1.0-2'}}
-                    <small class="text-title h6"> C°</small>
+                    <span class="icon ion-ios-thermometer orange pr-3"></span> {{temp1 | number:'1.0-2'}}
+                    <small class="text-title h6"> °C</small>
                 </p>
                 <p class="card-text">
                     <small class="text-muted">min {{tempExtMin}}° | max {{tempExtMax}}°</small>
@@ -53,7 +53,7 @@
                 </small>
                 <p class="h2 text-gray pt-3">
                     <span class="icon ion-ios-water orange pr-3"></span>
-                    {{hum2 | number:'1.0-2'}}
+                    {{hum1 | number:'1.0-2'}}
                     <small class="text-title h6"> %</small>
 
                 </p>
@@ -88,24 +88,23 @@
     <!--<a routerLink="/blog">Clickeame</a>-->
     <div class="card border-0 shadow">
         <div class="card-body">
-
             <ngb-tabset [justify]="currentJustify" class="tabset1">
-                <ngb-tab title="Temperatura y humedad">
+                <ngb-tab title="Temp. | Hum.">
                     <ng-template ngbTabContent>
                         <div class="text-title-2">Variables Ambientales</div>
                         <div echarts [options]="chartOption" class="demo-chart"></div>
                     </ng-template>
                 </ngb-tab>
                 <ngb-tab title="Peso">
-                    <ng-template ngbTabContent >
-                            <div class="text-title-2">Peso</div>
-                            <div echarts [options]="chartOption1" class="demo-chart"></div>
+                    <ng-template ngbTabContent>
+                        <div class="text-title-2">Peso</div>
+                        <div echarts [options]="chartOption1" class="demo-chart"></div>
                     </ng-template>
                 </ngb-tab>
                 <ngb-tab title="Actividad">
-                    <ng-template ngbTabContent >
-                            <div class="text-title-2">Actividad</div>
-                            <div echarts [options]="chartOption2" class="demo-chart"></div>
+                    <ng-template ngbTabContent>
+                        <div class="text-title-2">Actividad</div>
+                        <div echarts [options]="chartOption2" class="demo-chart"></div>
                     </ng-template>
                 </ngb-tab>
             </ngb-tabset>
